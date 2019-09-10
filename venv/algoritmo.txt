@@ -1,0 +1,26 @@
+Aula 01 - Web Semantica
+Introdução a Python e Web Semantica: Consulta de dados em HTTP
+
+Abordagens:
+
+- importação de bibliotecas em Python:
+    - requests: API utilizada para receber as informações(solicitações) do servidor HTTP.
+    - pprint: Print organizado de uma código HTML.
+
+- colocamos a nossa solicitação em uma variável, que será a resposta.
+- resposta contém: status da solicitação(get) e a codificação do site escolhido.
+- após isso, agregamos a resposta com a função .content. que será nossa pagina HTML.
+    - o resposta.content será nossa variável conteudo, que é um arranjo de dados(string) em Python.
+- utilizamos a função len(conteudo) para obtermos a quantidade de catacteres nesse arranjo, em bytes.
+- consultamos o código-fonte da página da DAC, para termos a ideia de como utilizar o slice
+( https://www.programiz.com/python-programming/methods/built-in/slice )
+- após isso, traduzimos bytes em string: conteudo.decode(encoding).splitlines()
+
+
+Ex1: No site da DAC (catálogo de cursos), Inserir o código do curso no input e receber o nome do curso no output.
+
+Algoritmo pensado: percorrer a variável conteudo, e procurar o código XX pesquisado. Usar a função slice e conceitos de substring.
+Dúvida:
+1 - Como organizar a variável conteudo, para que se torne igual ao código-fonte, e assim, obter as substrings(para localizar
+o nome junto ao código)?
+2 - Como fazer com que a codificação da variável seja arrumada (encoding?)?
